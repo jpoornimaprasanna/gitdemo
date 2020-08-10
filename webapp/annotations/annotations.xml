@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference Uri="/sap/bc/ui5_ui5/ui2/ushell/resources/sap/ushell/components/factsheet/vocabularies/UI.xml">
+		<edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="/Northwind/V2/Northwind/Northwind.svc/$metadata">
+		<edmx:Include Alias="Metadata" Namespace="NorthwindModel"/>
+	</edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="listReport1.Northwind.svc">
+			<!--===============================================================================
+                Entity Type from chosen collection 
+                ================================================================================-->
+			<Annotations Target="NorthwindModel.Employee">
+				<!--<Annotation Term="UI.FieldGroup">-->
+				<!--	<Record Type="UI.FieldGroupType">-->
+				<!--		<PropertyValue Property="Label" String="Notes"/>-->
+				<!--		<PropertyValue Property="Data" Path="@UI.Identification#identiqua1"/>-->
+				<!--	</Record>-->
+				<!--</Annotation>-->
+				<!--<Annotation Term="UI.Identification" Qualifier="identiqua1">-->
+				<!--	<Collection>-->
+				<!--		<Record Type="UI.DataField">-->
+				<!--			<PropertyValue Property="Value" Path="Orders/ShipCity"/>-->
+				<!--		</Record>-->
+				<!--		<Record Type="UI.DataField">-->
+				<!--			<PropertyValue Property="Value" Path="Orders/ShipCountry"/>-->
+				<!--		</Record>-->
+				<!--	</Collection>-->
+				<!--</Annotation>-->
+				<!--<Annotation Term="UI.SelectionFields" Qualifier="qualifier1">-->
+				<!--	<Collection>-->
+				<!--		<PropertyPath>Orders/CustomerID</PropertyPath>-->
+				<!--		<PropertyPath>Orders/CustomerID</PropertyPath>-->
+				<!--	</Collection>-->
+				<!--</Annotation>-->
+				<!--<Annotation Term="UI.HeaderFacets" Qualifier="headerQua1">-->
+				<!--	<Collection/>-->
+				<!--</Annotation>-->
+				<!--<Annotation Term="UI.HeaderInfo">-->
+				<!--	<Record Type="UI.HeaderInfoType">-->
+				<!--		<PropertyValue Property="TypeName" String="Sales Order"/>-->
+				<!--		<PropertyValue Property="TypeNamePlural" String="Sales Orders"/>-->
+				<!--		<PropertyValue Property="Title" Path=""/>-->
+				<!--		<PropertyValue Property="Description" Path=""/>-->
+				<!--	</Record>-->
+				<!--</Annotation>-->
+				<Annotation Term="UI.SelectionVariant" Qualifier="tab2">
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="SelectOptions">
+							<Collection>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="FirstName"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+												<PropertyValue Property="Low" String="Country"/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Text" String="Data"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.SelectionVariant" Qualifier="tab1">
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="SelectOptions">
+							<Collection>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="PostalCode"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/LT"/>
+												<PropertyValue Property="Low" Int="5678"/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Text" String="Employee"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification" Qualifier="facet1Qua">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Orders/CustomerID"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Orders/EmployeeID"/>
+						</Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.HeaderFacets">
+					<Collection>
+						<Record Type="UI.CollectionFacet">
+							<PropertyValue Property="Label" Path="Orders/RequiredDate"/>
+						</Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo" Qualifier="headerinfoqua">
+					<Record Type="UI.HeaderInfoType">
+						<PropertyValue Property="TypeName" String="order detail"/>
+						<PropertyValue Property="TypeNamePlural" String="order details"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.SelectionFields" Qualifier="searchQua">
+					<Collection>
+						<PropertyPath>Address</PropertyPath>
+						<PropertyPath>LastName</PropertyPath>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem" Qualifier="tableQua">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Address"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="City"/>
+						</Record>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Action" Path="LastName"/>
+						</Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

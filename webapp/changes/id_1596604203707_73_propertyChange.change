@@ -1,0 +1,41 @@
+{
+	"fileName": "id_1596604203707_73_propertyChange",
+	"fileType": "change",
+	"changeType": "propertyChange",
+	"moduleName": "",
+	"reference": "listReport1.Component",
+	"packageName": "$TMP",
+	"content": {
+		"property": "enabled",
+		"newValue": true
+	},
+	"selector": {
+		"id": "listReport1::sap.suite.ui.generic.template.ListReport.view.ListReport::Employees--listReportFilter-btnGo",
+		"type": "sap.m.Button",
+		"idIsLocal": false
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/listReport1/changes/",
+	"projectId": "listReport1",
+	"creation": "2020-08-05T05:10:08.790Z",
+	"originalLanguage": "EN",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.80.0",
+		"sourceChangeFileName": "",
+		"compositeCommand": ""
+	},
+	"oDataInformation": {},
+	"dependentSelector": {},
+	"validAppVersions": {
+		"creation": "1.0.0",
+		"from": "1.0.0",
+		"to": "1.0.0"
+	},
+	"jsOnly": false,
+	"variantReference": "",
+	"appDescriptorChange": false
+}
